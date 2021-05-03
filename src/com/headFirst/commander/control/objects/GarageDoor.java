@@ -14,6 +14,7 @@ public class GarageDoor {
         if (openRange + upRange >= 1) this.openRange = 1;
 
         this.openRange += upRange;
+        printState();
     }
 
     public void down(float downRange) {
@@ -21,6 +22,7 @@ public class GarageDoor {
         if (openRange - downRange <= 0) this.openRange = 0;
 
         this.openRange -= downRange;
+        printState();
     }
 
     public void stop(float stopAt) {
@@ -28,6 +30,7 @@ public class GarageDoor {
         if (stopAt <= 0) this.openRange = 0;
 
         this.openRange = stopAt;
+        printState();
     }
 
     public void printState() {

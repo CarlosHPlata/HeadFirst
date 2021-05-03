@@ -15,4 +15,9 @@ public class CeilingFanOnCommand implements Command {
     public void execute() {
         this.fan.setMediumMode();
     }
+
+    @Override
+    public void undo() {
+        this.fan.off();
+    }
 }
